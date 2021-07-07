@@ -56,6 +56,27 @@ public class BrowserOptionsTest {
     }
 
     public WebDriver getDriver(){
+        // Добавление свойств браузера Google Chrome (настройки сессии)
+
+        // а) с помощью класса DesiredCapabilities (устаревший способ) и строковых параметров
+        /*DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("platform", "windows");
+        capabilities.setCapability("unexpectedAlertBehaviour", "dismiss");
+        capabilities.setCapability("javascriptEnabled", false);
+        capabilities.setCapability("acceptInsecureCerts", false);
+        capabilities.setCapability("pageLoadStrategy", "normal");
+        return new ChromeDriver(capabilities);*/
+
+        // б) с помощью класса DesiredCapabilities (устаревший способ) и констант перечисления CapabilityType
+        /*DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
+        capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.DISMISS);
+        capabilities.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, false);
+        capabilities.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, false);
+        capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, PageLoadStrategy.NORMAL);
+        return new ChromeDriver(capabilities);*/
+
+        // в) с помощью класса **ChromeOptions** (правильный способ) и констант перечисления CapabilityType
         ChromeOptions options = new ChromeOptions();
         WebDriverManager.chromedriver().setup();
         options.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
