@@ -1,4 +1,3 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.AfterEach;
@@ -7,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SampleTest {
     protected static WebDriver driver; //объявление веб драйвера
@@ -20,9 +18,10 @@ public class SampleTest {
     public void setUp(){
         logger.info("env = " + env);
         driver = WebDriverFactory.getDriver(env.toLowerCase());
+        logger.info("Драйвер запущен!");
+
         /*WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();*/
-        logger.info("Драйвер запущен!");
     }
 
     //Открываем https://yandex.ru/ в браузере Google Chrome, пишем в лог.
