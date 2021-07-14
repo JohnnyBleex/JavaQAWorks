@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 
 public class BrowserWindowsTest {
     protected static WebDriver driver;
-    private Logger logger = LogManager.getLogger(BrowserWindowsTest.class);
+    private final Logger logger = LogManager.getLogger(BrowserWindowsTest.class);
 
     String env = System.getProperty("browser", "opera");
 

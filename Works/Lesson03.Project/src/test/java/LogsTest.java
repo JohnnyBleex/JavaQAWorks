@@ -13,7 +13,7 @@ import org.openqa.selenium.logging.Logs;
 
 public class LogsTest {
     protected static WebDriver driver;
-    private Logger logger = LogManager.getLogger(LogsTest.class);
+    private final Logger logger = LogManager.getLogger(LogsTest.class);
 
     // Читаем передаваемый параметр browser (-Dbrowser)
     String env = System.getProperty("browser", "chrome");

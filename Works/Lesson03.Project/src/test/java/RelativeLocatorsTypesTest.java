@@ -47,55 +47,55 @@ public class RelativeLocatorsTypesTest {
         WebElement element = driver.findElement(RelativeLocator
                 .with(By.xpath("//label[text()=\"Option 2\"]"))
                 .below(By.xpath("//label[text()=\"Option 1\"]")));
-        logger.info("WebElement: "+element.getTagName());
+        logger.info("WebElement: " + element.getTagName());
         element.click();
 
         waitingForAPage();
     }
 
     @Test
-    public void searchToLeftOfElementTest(){
+    public void searchToLeftOfElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
         logger.info("Открыта страница webdriveruniversity.com - " +
                 "https://webdriveruniversity.com/Data-Table/index.html");
 
         // Найти элемент слева от элемента
         WebElement element = driver.findElement(RelativeLocator
-        .with(By.xpath("//button[text()=\"Button-1\"]"))
-        .toLeftOf(By.xpath("//button[text()=\"Button-3\"]")));
-        logger.info("WebElement: "+ element.getTagName());
+                .with(By.xpath("//button[text()=\"Button-1\"]"))
+                .toLeftOf(By.xpath("//button[text()=\"Button-3\"]")));
+        logger.info("WebElement: " + element.getTagName());
         element.click();
 
         waitingForAPage();
     }
 
     @Test
-    public void searchToRightOfElementTest(){
+    public void searchToRightOfElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
         logger.info("Открыта страница webdriveruniversity.com - " +
                 "https://webdriveruniversity.com/Data-Table/index.html");
 
         // Найти элемент справа от элемента
         WebElement element = driver.findElement(RelativeLocator
-        .with(By.xpath("//button[text()=\"Button-3\"]"))
-        .toRightOf(By.xpath("//button[text()=\"Button-1\"]")));
-        logger.info("WebElement: "+element.getTagName());
+                .with(By.xpath("//button[text()=\"Button-3\"]"))
+                .toRightOf(By.xpath("//button[text()=\"Button-1\"]")));
+        logger.info("WebElement: " + element.getTagName());
         element.click();
 
         waitingForAPage();
     }
 
     @Test
-    public void searchNearElementTest(){
+    public void searchNearElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
         logger.info("Открыта страница webdriveruniversity.com - " +
                 "https://webdriveruniversity.com/Data-Table/index.html");
 
         // Найти элемент рядом с элементом
         WebElement element = driver.findElement(RelativeLocator
-        .with(By.xpath("//button[text()=\"Button-2\"]"))
-        .near(By.xpath("//button[text()=\"Button-1\"]")));
-        logger.info("WebElement: "+element.getTagName());
+                .with(By.xpath("//button[text()=\"Button-2\"]"))
+                .near(By.xpath("//button[text()=\"Button-1\"]")));
+        logger.info("WebElement: " + element.getTagName());
         element.click();
 
         waitingForAPage();

@@ -53,7 +53,8 @@ public class SimpleLocatorsTypesTest {
     @Test
     public void searchByClassTest(){
         driver.get("https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
-        logger.info("Открыта страница demosite.executeautomation.com - " + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
+        logger.info("Открыта страница demosite.executeautomation.com - "
+                + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
 
         // Найти элемент по атрибуту class элемента
         List<WebElement> elements = driver.findElements(By.className("detail_box"));
@@ -93,7 +94,8 @@ public class SimpleLocatorsTypesTest {
     @Test
     public void searchByCssSelectorTest(){
         driver.get("https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
-        logger.info("Открыта страница demosite.executeautomation.com - " + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
+        logger.info("Открыта страница demosite.executeautomation.com - "
+                + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
 
         // Найти элемент по CSS селектору
         WebElement element1 = driver.findElement(By.cssSelector("input#Initial"));
@@ -119,7 +121,8 @@ public class SimpleLocatorsTypesTest {
     @Test
     public void searchByXpathQueryTest(){
         driver.get("https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
-        logger.info("Открыта страница demosite.executeautomation.com - " + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
+        logger.info("Открыта страница demosite.executeautomation.com - "
+                + "https://demosite.executeautomation.com/index.html?UserName=&Password=&Login=Login");
 
         // Найти элемент по XPATH запросу
         WebElement element1 = driver.findElement(By.xpath(".//input[@id='Initial']"));

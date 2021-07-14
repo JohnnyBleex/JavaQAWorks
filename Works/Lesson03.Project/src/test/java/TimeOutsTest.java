@@ -5,13 +5,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 //Запустить тест командой mvn clean test с параметром -Dtest=TimeOutsTest#timeOutsTest1
 
 public class TimeOutsTest {
     protected static WebDriver driver;
-    private Logger logger = LogManager.getLogger(TimeOutsTest.class);
+    private final Logger logger = LogManager.getLogger(TimeOutsTest.class);
 
     String env = System.getProperty("browser", "chrome");
 
@@ -24,7 +24,7 @@ public class TimeOutsTest {
 
     @Test
     public void timeOutsTest1(){
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
         driver.get("https://yandex.ru/");
         logger.info("Открыта страница Yandex - " + "https://yandex.ru/");
     }

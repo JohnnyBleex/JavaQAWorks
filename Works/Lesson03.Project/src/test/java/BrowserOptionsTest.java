@@ -13,7 +13,7 @@ import org.openqa.selenium.remote.CapabilityType;
 
 public class BrowserOptionsTest {
     protected static WebDriver driver;
-    private Logger logger = LogManager.getLogger(BrowserOptionsTest.class);
+    private final Logger logger = LogManager.getLogger(BrowserOptionsTest.class);
 
     String env = System.getProperty("browser", "chrome");
 

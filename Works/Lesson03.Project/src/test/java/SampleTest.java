@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 
 public class SampleTest {
     protected static WebDriver driver; //объявление веб драйвера
-    private Logger logger = LogManager.getLogger(SampleTest.class); //инициализация логгера
+    private final Logger logger = LogManager.getLogger(SampleTest.class); //инициализация логгера
 
     String env = System.getProperty("browser", "chrome"); //Читаем передаваемый параметр browser (-Dbrowser)
 
@@ -32,11 +32,11 @@ public class SampleTest {
 
         // Вывод заголовка страницы
         String title = driver.getTitle();
-        logger.info("title - " + title.toString());
+        logger.info("title - " + title);
 
         // Вывод текущего URL
         String currentUrl = driver.getCurrentUrl();
-        logger.info("current URL - " + currentUrl.toString());
+        logger.info("current URL - " + currentUrl);
 
         // Ввод текста для поиска
         String searchInputXpath = ".//input[@class='input__control input__input mini-suggest__input']";

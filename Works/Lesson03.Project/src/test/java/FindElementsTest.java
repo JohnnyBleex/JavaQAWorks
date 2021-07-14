@@ -27,7 +27,8 @@ public class FindElementsTest {
     @Test
     public void findOneElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
-        logger.info("Открыта страница webdriveruniversity.com - " + "https://webdriveruniversity.com/Data-Table/index.html");
+        logger.info("Открыта страница webdriveruniversity.com - "
+                + "https://webdriveruniversity.com/Data-Table/index.html");
 
         // Строка xpath запроса для поиска одного веб элемента
         String query = "//table[@id=\"t01\"]//tr[2]//td[2]";
@@ -42,7 +43,8 @@ public class FindElementsTest {
     @Test
     public void findManyElementsTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
-        logger.info("Открыта страница webdriveruniversity.com - " + "https://webdriveruniversity.com/Data-Table/index.html");
+        logger.info("Открыта страница webdriveruniversity.com - "
+                + "https://webdriveruniversity.com/Data-Table/index.html");
 
         //Строка Xpath запроса для поиска множества веб элементов
         String query = "//table[@id=\"t01\"]//tr[2]//td";
@@ -59,7 +61,8 @@ public class FindElementsTest {
     @Test
     public void findOneElementInElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
-        logger.info("Открыта страница webdriveruniversity.com - " + "https://webdriveruniversity.com/Data-Table/index.html");
+        logger.info("Открыта страница webdriveruniversity.com - "
+                + "https://webdriveruniversity.com/Data-Table/index.html");
 
         //Строка Xpath запроса для поиска одного веб элемента
         String query1 = "//table[@id=\"t01\"]//tr[2]";
@@ -81,7 +84,8 @@ public class FindElementsTest {
     @Test
     public void findManyElementsInElementTest() {
         driver.get("https://webdriveruniversity.com/Data-Table/index.html");
-        logger.info("Открыта страница webdriveruniversity.com - " + "https://webdriveruniversity.com/Data-Table/index.html");
+        logger.info("Открыта страница webdriveruniversity.com - "
+                + "https://webdriveruniversity.com/Data-Table/index.html");
 
         // Строка xpath запроса для поиска одного веб элемента
         String query1 = "//table[@id=\"t01\"]//tr[2]";
