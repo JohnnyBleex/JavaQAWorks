@@ -57,9 +57,10 @@ public class WebDriverFactory {
                 operaOptions.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
                 operaOptions.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.DISMISS);
                 operaOptions.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, false);
+                operaOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
                 operaOptions.addArguments("--start-maximized");
-                operaOptions.addArguments("--incognito");
+                operaOptions.addArguments("--Private");
 
                 logger.info("Драйвер для браузера Opera");
                 return new OperaDriver(operaOptions);
@@ -71,6 +72,11 @@ public class WebDriverFactory {
                 edgeOptions.setCapability(CapabilityType.PLATFORM_NAME, Platform.WINDOWS);
                 edgeOptions.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.DISMISS);
                 edgeOptions.setCapability(CapabilityType.SUPPORTS_JAVASCRIPT, false);
+                edgeOptions.setAcceptInsecureCerts(false);
+                edgeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+
+                edgeOptions.addArguments("--start-maximized");
+                edgeOptions.addArguments("--InPrivate");
                 logger.info("Драйвер для браузера Edge");
                 return new EdgeDriver(edgeOptions);
 
