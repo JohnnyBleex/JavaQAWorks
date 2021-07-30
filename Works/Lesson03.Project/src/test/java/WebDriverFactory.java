@@ -77,6 +77,7 @@ public class WebDriverFactory {
 
                 edgeOptions.addArguments("--start-maximized");
                 edgeOptions.addArguments("--InPrivate");
+
                 logger.info("Драйвер для браузера Edge");
                 return new EdgeDriver(edgeOptions);
 
