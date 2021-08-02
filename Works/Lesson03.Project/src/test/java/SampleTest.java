@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+
 public class SampleTest {
     protected static WebDriver driver; //объявление веб драйвера
     private final Logger logger = LogManager.getLogger(SampleTest.class); //инициализация логгера

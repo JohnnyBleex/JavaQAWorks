@@ -45,8 +45,8 @@ public class WebDriverFactory {
                 firefoxOptions.setAcceptInsecureCerts(false);
                 firefoxOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
 
-                firefoxOptions.addArguments("--start-maximized");
-                firefoxOptions.addArguments("--incognito");
+                firefoxOptions.addArguments("-kiosk");
+                firefoxOptions.addArguments("-private");
 
                 logger.info("Драйвер для браузера Mozilla Firefox");
                 return new FirefoxDriver(firefoxOptions);
