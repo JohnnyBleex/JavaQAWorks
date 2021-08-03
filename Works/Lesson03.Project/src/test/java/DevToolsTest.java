@@ -236,7 +236,7 @@ public class DevToolsTest {
         // Получение метрик
         List<Metric> metrics = devTools.send(Performance.getMetrics());
         List<String> metricNames = metrics.stream()
-                .map(o -> o.getName())
+                .map(Metric::getName)
                 .collect(Collectors.toList());
 
         // Performance.disable - выключение сбора метрик
@@ -289,9 +289,9 @@ public class DevToolsTest {
                 request -> {
                     // Новый URL запроса (подставляем в Fetch.continueRequest)
                     // Но нужно знать что подставлять иначе зафейлится
-                    String newUrl = request.getRequest().getUrl().contains("yandex.ru")
+                    /*String newUrl = request.getRequest().getUrl().contains("yandex.ru")
                             ? request.getRequest().getUrl().replace("yandex.ru", "ya.ru")
-                            : request.getRequest().getUrl();
+                            : request.getRequest().getUrl();*/
                     // Параметры запроса
                     RequestId requestId = request.getRequestId();                            // ID запроса
                     Optional<String> url = Optional.of(request.getRequest().getUrl());       // URL запроса

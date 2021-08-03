@@ -10,13 +10,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Sleeper;
 
 import java.io.BufferedInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.time.Duration;
 
 public class PdfTest {
     protected WebDriver driver;
@@ -48,8 +45,6 @@ public class PdfTest {
 
             // Закрытие файла PDF
             pdf.close();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,14 +78,6 @@ public class PdfTest {
         if (driver != null) {
             driver.quit();
             logger.info("Драйвер остановлен!");
-        }
-    }
-
-    private void waitingForAPage(int seconds) {
-        try {
-            Sleeper.SYSTEM_SLEEPER.sleep(Duration.ofSeconds(seconds));
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 }
